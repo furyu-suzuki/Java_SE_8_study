@@ -23,9 +23,9 @@ public class Lambda_3 {
 
         // -- ラムダ式を使うバージョン --
         File f = new File( "./" );
-        List<File> list = Arrays.asList( f.listFiles( ) );
-        list.forEach( name -> { if( name.toString().endsWith( key ) ){
-            System.out.println( name.getName() );
+        List<File> files = Arrays.asList( f.listFiles( ) );
+        files.forEach( file -> { if( file.toString().endsWith( key ) ){
+            System.out.println( file.getName() );
         } } );
 
     }
