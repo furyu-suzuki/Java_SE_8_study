@@ -7,3 +7,6 @@
 * Listにstaticメソッドとして追加する
 *
 * */
+
+Collections.emptyListやCollections.singletonListは、Listのstaticで良さそう。
+メソッドによっては、MapやSetなどのCollectionを継承したものに振り分けられそう。

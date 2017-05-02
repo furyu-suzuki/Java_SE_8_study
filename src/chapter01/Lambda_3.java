@@ -4,12 +4,13 @@ package chapter01;/*【課題3】
 * FilenameFilterではなく、ラムダ式を使用しなさい。
 * エンクロージングスコープからキャプチャされる変数はどれですか。
 * */
+
 import java.io.File;
 import java.util.List;
 import java.util.Arrays;
 
 public class Lambda_3 {
-    public static void main( String[] args ){
+    public static void main(String[] args) {
         String key = ".iml";
 
         // -- ラムダ式を使わないバージョン --
@@ -22,11 +23,13 @@ public class Lambda_3 {
 //        }
 
         // -- ラムダ式を使うバージョン --
-        File f = new File( "./" );
-        List<File> list = Arrays.asList( f.listFiles( ) );
-        list.forEach( name -> { if( name.toString().endsWith( key ) ){
-            System.out.println( name.getName() );
-        } } );
+        File f = new File("./");
+        List<File> files = Arrays.asList(f.listFiles());
+        files.forEach(file -> {
+            if (file.toString().endsWith(key)) {
+                System.out.println(file.getName());
+            }
+        });
 
     }
 }
