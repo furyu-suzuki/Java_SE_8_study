@@ -9,10 +9,7 @@ package chapter01;/*【課題9】
 * イテレータを使うなど、プラスアルファで学ぶこともたくさんあった。
 * */
 import java.io.File;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
@@ -23,7 +20,15 @@ public class Lambda_9 {
         Predicate<File> filter = x -> x.isDirectory();
         Coll coll = new Coll();
         coll.forEachIF( action, filter );
+
+        File f = new File("C:/java");
+        List2<File> list2 = new List2<>();
+        list2.addAll(Arrays.asList(f.listFiles()));
+        list2.forEachIF(action, filter);
     }
+}
+
+class List2<E> extends ArrayList<E> implements Collection2<E> {
 }
 
 class Coll implements Collection2<File>{
