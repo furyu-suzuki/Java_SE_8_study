@@ -20,8 +20,12 @@ public class Stream_2 {
         Stream<String> words = Stream.of(contents.split("[\\P{L}]+"));
         System.out.println(
                 words.filter(
-                    w -> { if(w.length() > 12){System.out.println("word : " + w);}
-                    return (w.length() > 12);}
+                        w -> {
+                            if (w.length() > 12) {
+                                System.out.println("word : " + w);
+                            }
+                            return (w.length() > 12);
+                        }
                 ).limit(5).count()
         );
         // .parallelにすると、5個以上でてくる。しないと5個だけでてくる。
