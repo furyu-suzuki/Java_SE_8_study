@@ -10,13 +10,17 @@
  */
 package chapter02;
 
+import java.util.Arrays;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class Stream_4 {
     public static void main(String[] args) {
         int[] values = {1, 4, 9, 16};
-        Stream.of(values);
-        //Stream<Integer> hoge = (Stream<Integer>) IntStream.of(values);
+//        Stream<Integer> hoge = (Stream<Integer>) IntStream.of(values); // コンパイルしてみると変換できないですね
+//        Stream<int[]> result = Stream.of(values); // Stream.of()を使うとint配列のstreamになります
+        // 代わりに使うとなると、下2つのどれかですかね
+        IntStream stream = Arrays.stream(values);
+//        IntStream stream = IntStream.of(values);
+        stream.forEach(System.out::println);
     }
 }
