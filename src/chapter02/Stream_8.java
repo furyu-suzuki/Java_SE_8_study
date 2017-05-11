@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.function.BiFunction;
 import java.util.stream.*;
 
-public class Stram_8 {
+public class Stream_8 {
     public static void main(String[] args) {
         Stream<Integer> first = Stream.of(2, 3, 4, 5, 6);
         Stream<Integer> second = Stream.of(9, 9, 9, 9, 8, 8, 8, 8);
@@ -45,7 +45,8 @@ public class Stram_8 {
         return ziped.stream();
     }
 
-    // -- 答え（https://gist.github.com/kjkrol/51a5a7612f0411849c62 より） -- //
+    // -- 答え（https://gist.github.com/kjkrol/51a5a7612f0411849c62,
+    // http://qiita.com/KIchiro/items/e63d91d5a61069c0278b より） -- //
     public static <T> Stream<Tuple2> zip_2(Stream<T> first, Stream<T> second) {
 //        Tuple2<T, T> tpl4_1 = new Tuple2<>(a, b);
         BiFunction<T, T, Tuple2> zipped = (a, b) -> new Tuple2<T, T>(a, b);
