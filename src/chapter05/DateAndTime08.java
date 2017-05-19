@@ -21,6 +21,6 @@ public class DateAndTime08 {
                 instant.atZone(ZoneId.of(zone)).getOffset()
         );
 
-        offsetStream.forEach(x -> System.out.println(x.toString()));
+        offsetStream.forEach(x -> System.out.println(x));
     }
 }
