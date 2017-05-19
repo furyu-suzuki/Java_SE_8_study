@@ -5,7 +5,7 @@
  * たとえば、次のコードを見てください。
  * today.with(next(w -> getDayOfWeek().getValue() < 6))
  * このコードは、今日よりあとにあって平日となる最初の日付を返します。
- *
+ * <p>
  * 【メモ】
  * do-while文で1日ずつ判断するバージョンならばできたのだけれど、
  * よりシンプルというか、かっちょよく実現する方法はないのだろうか。
@@ -19,21 +19,20 @@ import java.util.function.Predicate;
 
 public class DateAndTime03 {
     public static void main(String[] args) {
-        LocalDate date = LocalDate.of(2017, 05, 17);
+        LocalDate date = LocalDate.now();
 
-        Predicate<LocalDate> pre = x -> x.getDayOfWeek() != DayOfWeek.FRIDAY; //ここ
+        // date以降の直近の金曜日を探す
+        Predicate<LocalDate> pre = x -> x.getDayOfWeek() == DayOfWeek.FRIDAY;
 
-        LocalDate result = date.with(next(pre));
-        System.out.println(result);
+        System.out.println(date.with(next(pre, date)) + "が次の金曜日だ!!!");
     }
 
-    public static TemporalAdjuster next(Predicate<LocalDate> pre) {
-        LocalDate x = LocalDate.of(2017, 3, 3);
-
+    static TemporalAdjuster next(Predicate<LocalDate> pre, LocalDate date) {
+        // 日付(date)を渡さないようにするならば、何かしらLocalDateをここで用意する
         do {
-            x = x.plusDays(1);
-        } while (pre.test(x));
+            date = date.plusDays(1);
+        } while (pre.test(date) != true);  //条件を満たすまで探すよ
 
-        return TemporalAdjusters.nextOrSame(x.getDayOfWeek());
+        return TemporalAdjusters.nextOrSame(date.getDayOfWeek());
     }
 }
