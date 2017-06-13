@@ -8,7 +8,7 @@
  * 条件でその期間から検索をかけるメソッドとか、都合のいいものが無さそうなので、
  * これ以上はシンプルにできないのかもしれない。
  */
-package chapter05;
+package main.java.chapter05;
 
 import java.time.*;
 import java.time.temporal.ChronoUnit;

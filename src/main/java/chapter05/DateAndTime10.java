@@ -4,7 +4,7 @@
  * 何時に到着しますか。
  * このような計算を処理できるプログラムを書きなさい。
  */
-package chapter05;
+package main.java.chapter05;
 
 import java.time.*;
 

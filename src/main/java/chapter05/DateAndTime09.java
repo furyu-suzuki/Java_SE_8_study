@@ -2,7 +2,7 @@
  * 【課題09】
  * 再度、ストリーム操作を使用して、オフセットに1時間未満の情報が含まれるすべてのタイムゾーンを見つけなさい。
  */
-package chapter05;
+package main.java.chapter05;
 
 import java.time.*;
 import java.util.stream.Stream;

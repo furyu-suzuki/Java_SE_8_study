@@ -4,7 +4,7 @@
  * 飛行時間は、何時何分ですか。
  * このような計算を処理できるプログラムを書きなさい。
  */
-package chapter05;
+package main.java.chapter05;
 
 import java.time.*;
 

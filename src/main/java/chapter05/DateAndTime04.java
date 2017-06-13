@@ -9,7 +9,7 @@
  * 25  26  27  28  29  30  31
  * 3月1日が金指であることを示しています。（土日が右端に表示されるようにしなさい。）
  */
-package chapter05;
+package main.java.chapter05;
 
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;

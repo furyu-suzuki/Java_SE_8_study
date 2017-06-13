@@ -4,8 +4,8 @@
 package chapter03;
 
 public class Pair<T>{
-    T first;
-    T second;
+    public T first;
+    public T second;
 
     public Pair( T first, T second ){
         this.first = first;

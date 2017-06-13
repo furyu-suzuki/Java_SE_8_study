@@ -8,7 +8,7 @@
  * ひとまず出力させるぞっていうのはできたが、他の方法もあるのではないか、そもそも違うんじゃないか、と思い見直し中。
  * -> ジョンさんに相談して解決した!
  */
-package chapter05;
+package main.java.chapter05;
 
 import java.time.*;
 import java.util.stream.Stream;

@@ -37,7 +37,7 @@ public class LambdaPrograming01 {
     }
 
     // -- 本にもともとあったロギングの例 -- //
-    // logger.info( () -> "x: " + x + ", y: " + y ); で呼び出し
+    // //logger.info( () -> "x: " + x + ", y: " + y ); で呼び出し
     // public static void info(Logger logger, Supplier<String> message){
     //      if (logger.isLoggable(Level.INFO))
     //          logger.info(message.get());

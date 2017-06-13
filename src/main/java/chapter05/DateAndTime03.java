@@ -10,7 +10,7 @@
  * do-while文で1日ずつ判断するバージョンならばできたのだけれど、
  * よりシンプルというか、かっちょよく実現する方法はないのだろうか。
  */
-package chapter05;
+package main.java.chapter05;
 
 import java.time.*;
 import java.time.temporal.TemporalAdjuster;

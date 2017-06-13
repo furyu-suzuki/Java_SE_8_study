@@ -7,7 +7,7 @@
  * 【127ページ5.5節で説明した問題】
  * カレンダーアプリを作成する場合には、1つの国から別の国へ行き来する人を考慮しなくてはなりません。
  */
-package chapter05;
+package main.java.chapter05;
 
 import java.time.*;
 import java.util.stream.Stream;
