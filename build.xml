@@ -1,0 +1,23 @@
+<!--
+- プロジェクト名は任意。
+- 定義するターゲットは以下の３つ。 情報の表示にはechoタスクを用いること。
+- show-project:プロジェクト名を組み込みプロパティを用いて表示する。
+- show-user:ビルドを実行したユーザ名を表示する。
+- show-jre-version:Antの実行に利用しているJRE(Java Runtime Environment)のバージョンを表示する。
+- show-projectターゲットをデフォルトターゲットとする。
+- show-userターゲットおよびshow-jre-versionターゲットを実行するとき、常にshow-projectターゲットが事前に実行されるようにする。
+-->
+
+<project name="SE8study" default="show-project" basedir="./">
+    <target name="show-project">
+        <echo message="project = ${ant.project.name}"/>
+    </target>
+
+    <target name="show-user" depends="show-project">
+        <echo message="user = ${user.name}"/>
+    </target>
+
+    <target name="show-jre-version" depends="show-project">
+        <echo message="Ant version = ${ant.version}"/>
+    </target>
+</project>
